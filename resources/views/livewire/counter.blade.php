@@ -8,4 +8,7 @@
         <button wire:click="increment({{ $step }})" class="btn btn-primary">Plus +</button>
         <h1 class="h1">{{ $count }}</h1>
     </div>
+
+    @for ($i = 1; $i <= 10; $i++) {{-- <livewire:helloworld :count="$i" :key="$i"> --}} @livewire('helloworld', ['count'=> $i], key($i))
+        @endfor
 </div>

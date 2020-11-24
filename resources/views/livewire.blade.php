@@ -22,8 +22,10 @@
             <div class="col-md-12">
                 <h1 class="text-center"><u>Livewire 2.0</u></h1>
                 {{-- @livewire('counter') --}}
-                <livewire:counter />
-                <livewire:databind></livewire:databind>
+                {{-- <livewire:counter />
+                <livewire:databind></livewire:databind> --}}
+                {{-- @livewire('parentcomponent') --}}
+                @livewire('count')
             </div>
         </div>
     </div>
