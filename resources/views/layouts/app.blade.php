@@ -9,9 +9,6 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -49,6 +46,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/contact') }}">{{ __('Contact') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/todos') }}">{{ __('Todos') }}</a>
                     </li>
                     @guest
                         @if (Route::has('login'))
@@ -88,18 +88,13 @@
     </nav>
 
     <main class="py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    @yield('content')
-                </div>
-            </div>
-        </div>
+        @yield('content')
+        {{ $slot }}
     </main>
 </div>
 
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}" defer></script>
 @livewireScripts
-<x-livewire-alert::scripts/>
 </body>
 </html>
-

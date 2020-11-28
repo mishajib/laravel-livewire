@@ -1,5 +1,6 @@
 <div>
     <h1 class="text-center">{{ $counter }}</h1>
+    <h2>{{ $step }}</h2>
     <div>
         <input type="text" wire:model="step" class="form-control">
     </div>

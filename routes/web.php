@@ -18,3 +18,16 @@ Route::get('/', function () {
 });
 
 Route::view('/livewire', 'livewire');
+
+Route::view('/contact-form', 'contact-form');
+Route::view('/count', 'count');
+
+Route::get('/home', \App\Http\Livewire\Home::class);
+Route::get('/about', \App\Http\Livewire\About::class);
+Route::get('/contact', \App\Http\Livewire\Contact::class);
+
+Auth::routes();
+
+Route::resource('todos', \App\Http\Controllers\TodoController::class);
+
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
